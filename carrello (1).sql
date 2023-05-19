@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 12, 2023 alle 22:02
+-- Creato il: Mag 19, 2023 alle 09:40
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.0.28
 
@@ -45,7 +45,8 @@ CREATE TABLE `carrello` (
 
 INSERT INTO `carrello` (`id`, `data_creazione`, `quantita`, `immagine`, `IDoggetto`, `prezzo`, `nomeOgg`, `IDUtente`, `nascosto`) VALUES
 (11, '2023-05-08', 2, 'images/product-06.jpg ', 1, 94.99, 'Sir T9ewed ', 1, 1),
-(14, '2023-05-08', 1, 'images/magliettarossa.jpg ', 5, 10, 'maglietta rossa ', 1, 1);
+(14, '2023-05-08', 1, 'images/magliettarossa.jpg ', 5, 10, 'maglietta rossa ', 1, 1),
+(15, '2023-05-08', 1, 'images/magliettarossa.jpg ', 5, 10, 'maglietta rossa ', 1, 0);
 
 --
 -- Indici per le tabelle scaricate
@@ -65,7 +66,7 @@ ALTER TABLE `carrello`
 -- AUTO_INCREMENT per la tabella `carrello`
 --
 ALTER TABLE `carrello`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

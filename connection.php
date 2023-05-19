@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "my_hamzabrss";
+$dbname = "ecommerce";
 
 
 // Create connection

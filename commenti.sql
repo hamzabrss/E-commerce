@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 12, 2023 alle 22:03
+-- Creato il: Mag 19, 2023 alle 09:40
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.0.28
 
@@ -24,43 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `utente`
+-- Struttura della tabella `commenti`
 --
 
-CREATE TABLE `utente` (
-  `ID` int(25) NOT NULL,
-  `username` varchar(14) NOT NULL,
-  `passwor` varchar(14) NOT NULL,
-  `Admino` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+CREATE TABLE `commenti` (
+  `idcomm` int(25) NOT NULL,
+  `contenutocomm` text NOT NULL,
+  `idprod` int(25) NOT NULL,
+  `idutente` int(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dump dei dati per la tabella `utente`
+-- Dump dei dati per la tabella `commenti`
 --
 
-INSERT INTO `utente` (`ID`, `username`, `passwor`, `Admino`) VALUES
-(1, 'hamza', 'oppo', 1),
-(3, 'ciccio', 'bombo', 0);
+INSERT INTO `commenti` (`idcomm`, `contenutocomm`, `idprod`, `idutente`) VALUES
+(1, 'belorologio', 1, 1);
 
 --
 -- Indici per le tabelle scaricate
 --
 
 --
--- Indici per le tabelle `utente`
+-- Indici per le tabelle `commenti`
 --
-ALTER TABLE `utente`
-  ADD PRIMARY KEY (`ID`);
+ALTER TABLE `commenti`
+  ADD PRIMARY KEY (`idcomm`);
 
 --
 -- AUTO_INCREMENT per le tabelle scaricate
 --
 
 --
--- AUTO_INCREMENT per la tabella `utente`
+-- AUTO_INCREMENT per la tabella `commenti`
 --
-ALTER TABLE `utente`
-  MODIFY `ID` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `commenti`
+  MODIFY `idcomm` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

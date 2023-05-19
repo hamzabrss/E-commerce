@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mag 19, 2023 alle 09:39
+-- Creato il: Mag 19, 2023 alle 09:38
 -- Versione del server: 10.4.28-MariaDB
 -- Versione PHP: 8.0.28
 
@@ -24,25 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `ordine`
+-- Struttura della tabella `utente`
 --
 
-CREATE TABLE `ordine` (
+CREATE TABLE `utente` (
   `ID` int(25) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `cognome` varchar(50) NOT NULL,
-  `indirizzo` varchar(100) NOT NULL,
-  `IDcarrello` int(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `username` varchar(14) NOT NULL,
+  `passwor` varchar(14) NOT NULL,
+  `Admino` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dump dei dati per la tabella `utente`
+--
+
+INSERT INTO `utente` (`ID`, `username`, `passwor`, `Admino`) VALUES
+(1, 'hamza', 'oppo', 1),
+(3, 'ciccio', 'bombo', 0);
 
 --
 -- Indici per le tabelle scaricate
 --
 
 --
--- Indici per le tabelle `ordine`
+-- Indici per le tabelle `utente`
 --
-ALTER TABLE `ordine`
+ALTER TABLE `utente`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -50,10 +57,10 @@ ALTER TABLE `ordine`
 --
 
 --
--- AUTO_INCREMENT per la tabella `ordine`
+-- AUTO_INCREMENT per la tabella `utente`
 --
-ALTER TABLE `ordine`
-  MODIFY `ID` int(25) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `utente`
+  MODIFY `ID` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
